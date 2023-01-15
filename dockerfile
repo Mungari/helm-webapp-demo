@@ -24,4 +24,4 @@ ENV WEBAPP_PORT=8010
 # start server
 EXPOSE 8080
 STOPSIGNAL SIGTERM
-CMD ["/opt/app/start-server.sh"]
+ENTRYPOINT ["bash", "-c" , "/opt/app/start-server.sh"]
