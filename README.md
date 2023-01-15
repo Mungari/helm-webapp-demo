@@ -6,7 +6,7 @@ Supports the following env variables for configuration:
 
 | VAR | Required | Default            | Description|
 |----------|----------|------------------------|---|
-| NGINX_HTTP_PORT_NUMBER  | no      | 8020 | What port nginx will listen on |
+| NGINX_HTTP_PORT_NUMBER  | no      | 8080 | What port nginx will listen on |
 | WEBAPP_PORT | no | 8010 | What port gunicorn will listen on |
 
 
@@ -18,7 +18,7 @@ To deploy on kubernetes:
         repository: mungari/helm-webapp-demo
         tag: main
     containerPorts:
-        http: 8020 # You can hange this, this will set NGINX_HTTP_PORT_NUMBER env var
+        http: CUSTOM # You can hange this, this will set NGINX_HTTP_PORT_NUMBER env var
     extraEnvVars: [WEBAPP_PORT=8010] # You can change the value 
     ```
 3. Run the following commands:

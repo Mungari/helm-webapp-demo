@@ -18,10 +18,9 @@ WORKDIR /opt/app
 RUN pip install -r requirements.txt
 RUN chown -R www-data:www-data /opt/app
 
-ENV NGINX_HTTP_PORT_NUMBER=8020
 ENV WEBAPP_PORT=8010
 
 # start server
-EXPOSE 8020
+EXPOSE 8080
 STOPSIGNAL SIGTERM
 CMD ["/opt/app/start-server.sh"]
