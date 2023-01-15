@@ -20,7 +20,6 @@ RUN chown -R 1001:1001 /opt/app
 RUN chown -R 1001:1001 /var/lib/nginx
 RUN chmod +x /opt/app/start-server.sh
 
-RUN  envsubst < /etc/nginx/conf.d/nginx.default.template > /etc/nginx/sites-available/default
 # start server
 EXPOSE 8020
 STOPSIGNAL SIGTERM
