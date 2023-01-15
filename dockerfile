@@ -17,6 +17,7 @@ COPY demo_app /opt/app/demo_app/
 WORKDIR /opt/app
 RUN pip install -r requirements.txt
 RUN chown -R 1001:1001 /opt/app
+RUN chmod +x /opt/app/start-server.sh
 
 ENV WEBAPP_PORT=8010
 
