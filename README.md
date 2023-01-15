@@ -14,12 +14,12 @@ To deploy on kubernetes:
 1. Create a ``myvalues.yml`` file with the following:
     ```
     image:
-        registry: ghcr.io
-        repository: mungari/helm-webapp-demo
+        registry: docker.io
+        repository: birbatron/demo-app
         tag: main
     containerPorts:
         http: CUSTOM # You can hange this, this will set NGINX_HTTP_PORT_NUMBER env var
-    extraEnvVars: [WEBAPP_PORT=8010] # You can change the value 
+    extraEnvVars: ["WEBAPP_PORT=8010"] # You can change the value 
     ```
 3. Run the following commands:
    ```
