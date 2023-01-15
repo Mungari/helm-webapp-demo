@@ -21,7 +21,11 @@ To deploy on kubernetes:
         http: CUSTOM # You can hange this, this will set NGINX_HTTP_PORT_NUMBER env var
     extraEnvVars:
         - name: WEBAPP_PORT
-          value: "8010" # You can change the value 
+          value: "8010" # You can change the value
+    containerSecurityContext:
+        enabled: true
+        runAsUser: 1001
+        runAsNonRoot: true
     ```
 3. Run the following commands:
    ```
