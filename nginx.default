@@ -1,7 +1,7 @@
 # nginx.default
 
 server {
-    listen $NGINX_PORT;
+    listen $NGINX_HTTP_PORT_NUMBER;
     server_name example.org;
 
     location / {
